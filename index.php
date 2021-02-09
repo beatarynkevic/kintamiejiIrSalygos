@@ -103,6 +103,87 @@ if ($fourth === 2) $countTwo++;
 
 echo 'nuliu yra:'.$countZero.'<br>'.'vienetu yra: '.$countOne.'<br>'.'dviejetu yra: '.$countTwo.'<br>';
 
+//6 Uzduotis
+echo '<br><br>';
+echo '6 uzduotis';
+echo '<br>';
+$skaicius = rand(1, 6);
+
+echo "<h".$skaicius.">".$skaicius."</h".$skaicius.">";
+
+//7 Uzduotis
+echo '<br><br>';
+echo '7 uzduotis';
+echo '<br>';
+
+$skaicius1 = rand(-10, 10);
+$skaicius2 = rand (-10, 10);
+$skaicius3 = rand(-10, 10);
+
+if ($skaicius1 == 0) {
+    echo '<span style="color:red;">'. $skaicius1 .'</span>';
+} else if($skaicius1 < 0) {
+    echo '<span style="color:green;">'. $skaicius1 .'</span>';
+} else {
+    echo '<span style="color:blue;">'. $skaicius1 .'</span>';
+}
+echo '<br>';
+if ($skaicius2 == 0) {
+    echo '<span style="color:red;">'. $skaicius2 .'</span>';
+}else if($skaicius2 < 0) {
+    echo '<span style="color:green;">'. $skaicius2 .'</span>';
+} else {
+    echo '<span style="color:blue;">'. $skaicius2 .'</span>';
+}
+echo '<br>';
+if ($skaicius3 == 0) {
+    echo '<span style="color:red;">'. $skaicius3 .'</span>';
+}else if($skaicius3 < 0) {
+    echo '<span style="color:green;">'. $skaicius3 .'</span>';
+} else {
+    echo '<span style="color:blue;">'. $skaicius3 .'</span>';
+}
+echo '<br>';
+
+//8 Uzduotis
+echo '<br><br>';
+echo '8 uzduotis';
+echo '<br>';
+
+$zvakiuKiekis = rand(5, 3000);
+
+if ($zvakiuKiekis > 1000 && $zvakiuKiekis < 2000) {
+    echo 'Zvakiu kiekis yra: '. $zvakiuKiekis .'<br> Kaina su 3proc nuolaida yra: '. ($zvakiuKiekis*97/100);
+} else if ($zvakiuKiekis > 2000) {
+    echo 'Zvakiu kiekis yra: '. $zvakiuKiekis .'<br> Kaina su 4proc nuolaida yra: '. ($zvakiuKiekis*96/100);
+} else {
+    echo 'Zvakiu kiekis yra: '. $zvakiuKiekis .'<br> Nuolaida nera suteikiama';
+}
+
+//9 Uzduotis
+echo '<br><br>';
+echo '9 uzduotis';
+echo '<br>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ?>
