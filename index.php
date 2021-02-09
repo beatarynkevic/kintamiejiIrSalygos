@@ -208,7 +208,7 @@ echo 'Dabartinis laikas yra: '. $valandos.':'.$minutes.':'.$sekundes;
 echo '<br>';
 
 $hoursAfter = $valandos;
-$minutesAfter = intval($papildomosSekundes/60) + $minutes;
+$minutesAfter = floor($papildomosSekundes/60) + $minutes;
 $secondsAfter = ($papildomosSekundes % 60) + $second;
 
 if($secondsAfter >= 60) {
