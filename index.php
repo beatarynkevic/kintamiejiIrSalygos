@@ -165,17 +165,84 @@ echo '<br><br>';
 echo '9 uzduotis';
 echo '<br>';
 
+$uno = rand(0, 100);
+$dos = rand(0, 100);
+$tres = rand(0, 100);
+
+$vidurkis = ($uno + $dos + $tres)/3;
+echo "Vidurkis yra: $vidurkis";
+echo '<br>';
+echo '------------------'.'<br>';
+
+$vidurkisSuSalygom = 0;
+if ($uno < 10 || $uno > 90) {
+    $vidurkisSuSalygom += $uno;
+}
+if ($dos < 10 || $dos > 90) {
+    $vidurkisSuSalygom += $dos;
+}
+if ($tres < 10 || $tres > 90) {
+    $vidurkisSuSalygom += $tres;
+}
+
+$vidurkis2 = $vidurkisSuSalygom/3;
+echo "Antras vidurkis yra: ";
+echo round($vidurkis2);
+
+//10 Uzduotis
+echo '<br><br>';
+echo '10 uzduotis';
+echo '<br>';
+
+$valandos = rand(0,24);
+$minutes = rand(0,59);
+$sekundes = rand(0,59);
+
+$valandos = $valandos < 10 ? '0' . $valandos : $valandos;
+$minutes = $minutes < 10 ? '0' . $minutes : $minutes;
+$sekundes = $sekundes < 10 ? '0' . $sekundes : $sekundes;
 
 
+$papildomosSekundes = rand(0, 300);
+echo 'Dabartinis laikas yra: '. $valandos.':'.$minutes.':'.$sekundes;
+echo '<br>';
 
+$hoursAfter = $valandos;
+$minutesAfter = intval($papildomosSekundes/60) + $minutes;
+$secondsAfter = ($papildomosSekundes % 60) + $second;
 
+if($secondsAfter >= 60) {
+    $minutesAfter++;
+    $secondsAfter = ($secondsAfter % 60);
+}
+if($minutesAfter >= 60) {
+    $hoursAfter++;
+    $minutesAfter = ($minutesAfter % 60);
+    $secondsAfter = ($secondsAfter % 60);
+}
+if ($hoursAfter >= 24) {
+    $hoursAfter = ($hoursAfter % 24);
+    $minutesAfter = ($minutesAfter % 60);
+    $secondsAfter = ($secondsAfter % 60);
+}
 
+$hoursAfter = $hoursAfter < 10 ? '0' . $hoursAfter : $hoursAfter;
+$minutesAfter = $minutesAfter < 10 ? '0' . $minutesAfter : $minutesAfter;
+$secondsAfter = $secondsAfter < 10 ? '0' . $secondsAfter : $secondsAfter;
 
+echo '<span style =" color:red;">Naujas laikas yra: '.$hoursAfter.':'.$minutesAfter.':'.$secondsAfter.'</span>';
 
+//11 Uzduotis
+echo '<br><br>';
+echo '11 uzduotis';
+echo '<br>';
 
-
-
-
+$rand1 = rand(1000, 9999);
+$rand2 = rand(1000, 9999);
+$rand3 = rand(1000, 9999);
+$rand4 = rand(1000, 9999);
+$rand5 = rand(1000, 9999);
+$rand6 = rand(1000, 9999);
 
 
 
