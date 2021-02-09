@@ -52,12 +52,3 @@ echo $pirmasKintamasis;
 
 
 ?>
-
-<?php
-
-is_int($name);
-is_int($name);
-is_int($name);
-is_int($name);
-
-?>
