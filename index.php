@@ -101,7 +101,12 @@ if ($second === 2) $countTwo++;
 if ($third === 2) $countTwo++;
 if ($fourth === 2) $countTwo++;
 
+echo "$first, $second, $third, $fourth";
+echo '<br>';
 echo 'nuliu yra:'.$countZero.'<br>'.'vienetu yra: '.$countOne.'<br>'.'dviejetu yra: '.$countTwo.'<br>';
+
+
+
 
 //6 Uzduotis
 echo '<br><br>';
@@ -153,7 +158,7 @@ echo '<br>';
 $zvakiuKiekis = rand(5, 3000);
 
 if ($zvakiuKiekis > 1000 && $zvakiuKiekis < 2000) {
-    echo 'Zvakiu kiekis yra: '. $zvakiuKiekis .'<br> Kaina su 3proc nuolaida yra: '. ($zvakiuKiekis*97/100);
+    echo 'Zvakiu kiekis yra: '. $zvakiuKiekis .'<br> Kaina su 3proc nuolaida yra: '. ($zvakiuKiekis*0.97);
 } else if ($zvakiuKiekis > 2000) {
     echo 'Zvakiu kiekis yra: '. $zvakiuKiekis .'<br> Kaina su 4proc nuolaida yra: '. ($zvakiuKiekis*96/100);
 } else {
@@ -168,6 +173,7 @@ echo '<br>';
 $uno = rand(0, 100);
 $dos = rand(0, 100);
 $tres = rand(0, 100);
+$daliklis = 0;
 
 $vidurkis = ($uno + $dos + $tres)/3;
 echo "Vidurkis yra: $vidurkis";
@@ -175,14 +181,17 @@ echo '<br>';
 echo '------------------'.'<br>';
 
 $vidurkisSuSalygom = 0;
-if ($uno < 10 || $uno > 90) {
+if ($uno < 10 && $uno > 90) {
     $vidurkisSuSalygom += $uno;
+    $daliklis++;
 }
-if ($dos < 10 || $dos > 90) {
+if ($dos < 10 && $dos > 90) {
     $vidurkisSuSalygom += $dos;
+    $daliklis++;
 }
-if ($tres < 10 || $tres > 90) {
+if ($tres < 10 && $tres > 90) {
     $vidurkisSuSalygom += $tres;
+    $daliklis++;
 }
 
 $vidurkis2 = $vidurkisSuSalygom/3;
@@ -244,9 +253,90 @@ $rand4 = rand(1000, 9999);
 $rand5 = rand(1000, 9999);
 $rand6 = rand(1000, 9999);
 
+echo "sugeneruoti skaiciai: $rand1, $rand2, $rand3, $rand4, $rand5, $rand6";
 
+if ($rand2 > $rand1) {
+    $laikinas = $rand2;
+    $rand2 = $rand1;
+    $rand1 = $laikinas;
+}
 
+$laikinas = $rand3;
+if ($rand3 > $rand1) {
+    $rand3 = $rand2;
+    $rand2 = $rand1;
+    $rand1 = $laikinas;
+} else if ($rand3 > $rand2) {
+    $rand3 = $rand2;
+    $rand2 = $laikinas;
+}
 
+$laikinas = $rand4;
+if ($rand4 > $rand1) {
+    $rand4 = $rand3;
+    $rand3 = $rand2;
+    $rand2 = $rand1;
+    $rand1 = $laikinas;
+} else if ($rand4 > $rand2) {
+    $rand4 = $rand3;
+    $rand3 = $rand2;
+    $rand2 = $laikinas;
+} else if ($rand4 > $rand3) {
+    $rand4 = $rand3;
+    $rand3 = $laikinas;
+}
+
+$laikinas = $rand5;
+if ($rand5 > $rand1) {
+    $rand5 = $rand4;
+    $rand4 = $rand3;
+    $rand3 = $rand2;
+    $rand2 = $rand1;
+    $rand1 = $laikinas;
+} else if ($rand5 > $rand2) {
+    $rand5 = $rand4;
+    $rand4 = $rand3;
+    $rand3 = $rand2;
+    $rand2 = $laikinas;
+} else if ($rand5 > $rand3) {
+    $rand5 = $rand4;
+    $rand4 = $rand3;
+    $rand3 = $laikinas;
+} else if ($rand5 > $rand4) {
+    $rand5 = $rand4;
+    $rand4 = $laikinas;
+}
+
+$laikinas = $rand6;
+if ($rand6 > $rand1) {
+    $rand6 = $rand5;
+    $rand5 = $rand4;
+    $rand4 = $rand3;
+    $rand3 = $rand2;
+    $rand2 = $rand1;
+    $rand1 = $laikinas;
+} else if ($rand6 > $rand2) {
+    $rand6 = $rand5;
+    $rand5 = $rand4;
+    $rand4 = $rand3;
+    $rand3 = $rand2;
+    $rand2 = $laikinas;
+} else if ($rand6 > $rand3) {
+    $rand6 = $rand5;
+    $rand5 = $rand4;
+    $rand4 = $rand3;
+    $rand3 = $laikinas;
+} else if ($rand6 > $rand4) {
+    $rand6 = $rand5;
+    $rand5 = $rand4;
+    $rand4 = $laikinas;
+} else if ($rand6 > $rand5) {
+    $rand6 = $rand5;
+    $rand5 = $laikinas;
+}
+
+echo "<br> Isrikiavimas nuo didziausio iki maziausio (be 'for' ir masyvo): <br>";
+echo "$rand1, $rand2, $rand3, $rand4, $rand5, $rand6";
 
 
 
