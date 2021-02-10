@@ -73,7 +73,8 @@ if( ($a+$b)>$c && ($a+$c)>$b && ($b+$c)>$a ) {
 } else{
     echo 'Nesusidaro trikampis';
 }
-
+echo '<br>';
+echo (($a+$b)>$c && ($a+$c)>$b && ($b+$c)>$a) ? 'galima' : 'negalima'; //su ternary operator
 //5 Uzduotis
 echo '<br><br>';
 echo '5 uzduotis';
@@ -181,17 +182,14 @@ echo '<br>';
 echo '------------------'.'<br>';
 
 $vidurkisSuSalygom = 0;
-if ($uno < 10 && $uno > 90) {
+if ($uno < 10 || $uno > 90) {
     $vidurkisSuSalygom += $uno;
-    $daliklis++;
 }
-if ($dos < 10 && $dos > 90) {
+if ($dos < 10 || $dos > 90) {
     $vidurkisSuSalygom += $dos;
-    $daliklis++;
 }
-if ($tres < 10 && $tres > 90) {
+if ($tres < 10 || $tres > 90) {
     $vidurkisSuSalygom += $tres;
-    $daliklis++;
 }
 
 $vidurkis2 = $vidurkisSuSalygom/3;
