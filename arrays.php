@@ -1,5 +1,5 @@
 <?php
-$fruits = ["orange", "banana", "apple"];
+$fruits = ["orange", "Kivi", "Apple"];
 echo '<pre>';
 var_dump($fruits);
 echo '</pre>';
@@ -40,7 +40,30 @@ echo '<pre>';
 var_dump(explode(", ", $string));
 echo '</pre>';
 
+//combine array elements into string
+echo implode("&", $fruits);
 
+//chceck if element exist in the array
+echo '<pre>';
+var_dump(in_array('apple', $fruits));
+echo '</pre>';
 
+//search element index in the array
+echo '<pre>';
+var_dump(array_search('Peach', $fruits));
+echo '</pre>';
 
+//merge two arrays
+$vegetables = ["Potato", "cucumber"];
+echo '<pre>';
+var_dump(array_merge($fruits, $vegetables));
+var_dump([...$fruits, ...$vegetables]);
+echo '</pre>';
+
+sort($fruits);
+echo '<pre>';
+var_dump($fruits);
+echo '</pre>';
+
+rsort($fruits);
 ?>
