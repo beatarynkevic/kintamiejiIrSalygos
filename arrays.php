@@ -27,14 +27,14 @@ echo '<pre>';
 var_dump($fruits);
 echo '</pre>';
 
-array_unshift($fruits, 'bar'); //adds firs elemnt of array
+array_unshift($fruits, 'bar'); //adds firs element of array
 echo '<pre>';
 var_dump($fruits);
 echo '</pre>';
 
 echo array_shift($fruits); //remove from the beginning of array
 
-$string = "Banana, Apple, Peach"; //split the string into an arrat
+$string = "Banana, Apple, Peach"; //split the string into an array
 explode(" ", $string);
 echo '<pre>';
 var_dump(explode(", ", $string));
